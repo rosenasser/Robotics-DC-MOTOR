@@ -1,0 +1,62 @@
+// MOTOR 1
+int y1=3;
+int y2=5;
+// MOTOR 2
+int x1=10;
+int x2=11;
+void setup()
+{
+  pinMode(y1, OUTPUT);
+  pinMode(y2, OUTPUT);
+  pinMode(x1, OUTPUT);
+  pinMode(x2, OUTPUT);
+}
+void dirction1(){
+  digitalWrite(y1,1);
+  digitalWrite(y2,0);
+  digitalWrite(x1,0);
+  digitalWrite(x2,1);
+}
+void dirction2(){
+  digitalWrite(y1,0);
+  digitalWrite(y2,1);
+  digitalWrite(x1,1);
+  digitalWrite(x2,0);
+}
+void dirction3(){
+  digitalWrite(y1,1);
+  digitalWrite(y2,0);
+  digitalWrite(x1,1);
+  digitalWrite(x2,0);
+}
+void dirction4(){
+  digitalWrite(y1,0);
+  digitalWrite(y2,1);
+  digitalWrite(x1,0);
+  digitalWrite(x2,1);
+}
+void stop1(){
+  digitalWrite(y1,0);
+  digitalWrite(y2,0);
+  digitalWrite(x1,0);
+  digitalWrite(x2,0);
+}
+
+void loop(){
+ dirction1();
+  delay(1000);
+  stop1();
+   delay(1000);
+   dirction2();
+  delay(1000);
+  stop1();
+   delay(1000);
+   dirction3();
+  delay(1000);
+  stop1();
+   delay(1000);
+   dirction4();
+  delay(1000);
+  stop1();
+   delay(1000);
+}
